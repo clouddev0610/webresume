@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./webresume
+    env_file:
+      - .env
+    volumes:
+      - sqlite_data:/app/data
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: /api
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
