@@ -412,7 +412,7 @@ export default function App() {
         </div>
       </nav>
       <div className="rz-note mono">
-        Test Note: update fields with info but maybe corky message here
+        Securing Infrastructure. Optimizing Performance. Enabling Innovation.
       </div>
 
       <div className="rz-shell">
