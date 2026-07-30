@@ -20,7 +20,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - certbot _certs:/etc/letsencrypt
+      - certbot_certs:/etc/letsencrypt
       - certbot_www:/var/www/certbot
     restart: unless-stopped
   
